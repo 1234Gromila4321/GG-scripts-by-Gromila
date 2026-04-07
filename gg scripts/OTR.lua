@@ -52,6 +52,7 @@ end
 end
 
 function Free_card_pack()
+  gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
   gg.searchNumber("7500;15000;35000;30;60;140::21", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
   gg.processResume()
 
@@ -83,6 +84,7 @@ if t == 1 then
  if input == nil then return end
 
  gg.clearResults()
+ gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
  gg.searchNumber(input[1], gg.TYPE_DWORD)
  gg.toast("Теперь потрать нитро и снова открой меню")
 end
@@ -221,6 +223,7 @@ function Add_Nitro_Repair()
   local search = input[1] .. ";" .. input[2] .. "::5"
 
   gg.clearResults()
+  gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
   gg.searchNumber(search, gg.TYPE_DWORD)
 
   local r = gg.getResults(100)
@@ -305,6 +308,7 @@ if t == nil then return end
 
 if t == 1 then
  gg.clearResults()
+ gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
  gg.searchNumber("8", gg.TYPE_DWORD)
 
  gg.toast("Зайди в PlayersList")
@@ -402,6 +406,7 @@ end
 
 function Secret_cars()
 
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("101;0;10;0;25000::17", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 revert = gg.getResults(100000, nil, nil, nil, nil, nil, nil, nil, nil)
@@ -409,48 +414,56 @@ gg.editAll("71;0;10;10;25000", gg.TYPE_DWORD)
 gg.processResume()
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("102;0;10;0;25000::17", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 revert = gg.getResults(100000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("72;0;10;10;25000", gg.TYPE_DWORD)
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("103;0;10;0;25000::17", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 revert = gg.getResults(100000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("73;0;10;10;25000", gg.TYPE_DWORD)
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("104;0;10;0;25000::17", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 revert = gg.getResults(100000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("74;0;10;10;25000", gg.TYPE_DWORD)
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("110;5;650;0;25000::17", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 revert = gg.getResults(100000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("75;5;650;650;25000", gg.TYPE_DWORD)
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("111;5;650;0;25000::17", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 revert = gg.getResults(100000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("76;5;650;650;25000", gg.TYPE_DWORD)
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("113;3;600;0;25000::17", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 revert = gg.getResults(100000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("77;3;600;600;25000", gg.TYPE_DWORD)
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("114;5;1;0;25000::17", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 revert = gg.getResults(100000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("78;5;1;1;25000", gg.TYPE_DWORD)
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("115;14;1;0;25000::17", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 revert = gg.getResults(100000, nil, nil, nil, nil, nil, nil, nil, nil)
@@ -473,6 +486,7 @@ function Change_Nick()
   if new == nil then return end
 
   gg.clearResults()
+  gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
   gg.searchNumber(":" .. old[1], gg.TYPE_BYTE)
 
   local r = gg.getResults(100000)
@@ -779,6 +793,7 @@ if t == 1 then
  gg.toast("Возьми груз")
  gg.sleep(5000)
 
+ gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
  gg.searchNumber("10", gg.TYPE_DWORD)
 
  gg.toast("Выгрузи груз")
@@ -805,6 +820,7 @@ if t == 2 then
  gg.toast("Возьми груз")
  gg.sleep(5000)
 
+ gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
  gg.searchNumber("28", gg.TYPE_DWORD)
 
  gg.toast("Выгрузи груз")
@@ -944,6 +960,7 @@ function ExitCarMenu()
 
   if t == 1 then
    gg.clearResults()
+   gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
    gg.searchNumber("6", gg.TYPE_DWORD)
 
    gg.toast("Создай сервер (30 сек)")
@@ -987,6 +1004,7 @@ end
 function CarUnlock()
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("0;65000::9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 gg.refineNumber("0", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
@@ -996,6 +1014,7 @@ gg.processResume()
 gg.processResume()
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("0;60000::9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 gg.refineNumber("0", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
@@ -1004,6 +1023,7 @@ gg.editAll("1", gg.TYPE_DWORD)
 gg.processResume()
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("0;55000::9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 gg.refineNumber("0", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
@@ -1011,6 +1031,7 @@ revert = gg.getResults(100000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("1", gg.TYPE_DWORD)
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("0;50000::9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 gg.refineNumber("0", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
@@ -1019,6 +1040,7 @@ gg.editAll("1", gg.TYPE_DWORD)
 gg.processResume()
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("0;48000::9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 gg.refineNumber("0", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
@@ -1026,12 +1048,14 @@ revert = gg.getResults(100000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("1", gg.TYPE_DWORD)
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("0;47000::9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 gg.refineNumber("0", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 revert = gg.getResults(100000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("1", gg.TYPE_DWORD)
 
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("0;45000::9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 gg.refineNumber("0", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
@@ -1040,6 +1064,7 @@ gg.editAll("1", gg.TYPE_DWORD)
 gg.processResume()
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("0;45000::9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 gg.refineNumber("0", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
@@ -1047,6 +1072,7 @@ revert = gg.getResults(100000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("1", gg.TYPE_DWORD)
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("0;44000::9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 gg.refineNumber("0", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
@@ -1054,6 +1080,7 @@ revert = gg.getResults(100000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("1", gg.TYPE_DWORD)
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("0;43000::9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 gg.refineNumber("0", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
@@ -1061,6 +1088,7 @@ revert = gg.getResults(100000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("1", gg.TYPE_DWORD)
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("0;42000::9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 gg.refineNumber("0", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
@@ -1068,6 +1096,7 @@ revert = gg.getResults(100000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("1", gg.TYPE_DWORD)
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("0;40000::9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 gg.refineNumber("0", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
@@ -1075,6 +1104,7 @@ revert = gg.getResults(100000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("1", gg.TYPE_DWORD)
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("0;37000::9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 gg.refineNumber("0", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
@@ -1082,6 +1112,7 @@ revert = gg.getResults(100000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("1", gg.TYPE_DWORD)
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("0;35000::9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 gg.refineNumber("0", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
@@ -1089,6 +1120,7 @@ revert = gg.getResults(100000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("1", gg.TYPE_DWORD)
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("0;32000::9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 gg.refineNumber("0", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
@@ -1096,6 +1128,7 @@ revert = gg.getResults(100000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("1", gg.TYPE_DWORD)
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("0;30000::9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 gg.refineNumber("0", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
@@ -1103,6 +1136,7 @@ revert = gg.getResults(100000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("1", gg.TYPE_DWORD)
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("0;28000::9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 gg.refineNumber("0", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
@@ -1110,6 +1144,7 @@ revert = gg.getResults(100000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("1", gg.TYPE_DWORD)
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("0;25000::9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 gg.refineNumber("0", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
@@ -1117,6 +1152,7 @@ revert = gg.getResults(100000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("1", gg.TYPE_DWORD)
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("0;20000::9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 gg.refineNumber("0", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
@@ -1124,6 +1160,7 @@ revert = gg.getResults(100000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("1", gg.TYPE_DWORD)
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("0;18000::9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 gg.refineNumber("0", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
@@ -1131,6 +1168,7 @@ revert = gg.getResults(100000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("1", gg.TYPE_DWORD)
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("0;15000::9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 gg.refineNumber("0", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
@@ -1138,6 +1176,7 @@ revert = gg.getResults(100000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("1", gg.TYPE_DWORD)
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("0;10000::9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 gg.refineNumber("0", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
@@ -1145,6 +1184,7 @@ revert = gg.getResults(100000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("1", gg.TYPE_DWORD)
 
 gg.clearResults()
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("0;5000::9", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 gg.refineNumber("0", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
