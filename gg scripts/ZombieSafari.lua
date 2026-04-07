@@ -93,6 +93,7 @@ function Diamonds()
   if input == nil then return end
 
   gg.clearResults()
+  gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
   gg.searchNumber(input[1], gg.TYPE_DWORD)
 
   gg.toast("Измени количество алмазов (30 сек)")
@@ -133,7 +134,7 @@ end
 
 gg.addListItems(list)
 
-gg.toast("Готово, собери ещё алмаз чтобы обновилось")
+gg.toast("Готово, открой кейс, или купи что-то за алмазы чтоб число обновилось")
 
 end
 
@@ -146,6 +147,7 @@ function XP()
   if input == nil then return end
 
   gg.clearResults()
+  gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
   gg.searchNumber(input[1], gg.TYPE_DWORD)
 
   gg.toast("Подними XP (30 сек)")
@@ -199,6 +201,7 @@ function LevelHack()
   if input == nil then return end
 
   gg.clearResults()
+  gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
   gg.searchNumber(input[1], gg.TYPE_DWORD)
 
   gg.toast("Подними уровень (30 сек)")
@@ -250,6 +253,7 @@ end
 
 function UpgradeCar()
 
+gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
 gg.searchNumber("0", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 gg.toast("Подними уровень прокачки до 2, у тебя 15 сек")
@@ -311,7 +315,8 @@ function Machine_Gun()
   if input == nil then return end
 
   local value = input[1]
-
+  
+  gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
   gg.searchNumber("200;" .. value .. ";100;400::13", gg.TYPE_DWORD)
 
   local r = gg.getResults(100)
@@ -333,7 +338,8 @@ function ShotGun()
   if input == nil then return end
 
   local value = input[1]
-
+  
+  gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
   gg.searchNumber("250;" .. value .. ";50;130::13", gg.TYPE_DWORD)
 
   local r = gg.getResults(100)
@@ -355,7 +361,8 @@ function Rocket_Launcher()
   if input == nil then return end
 
   local value = input[1]
-
+  
+  gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
   gg.searchNumber("1500;" .. value .. ";18;50::13", gg.TYPE_DWORD)
 
   local r = gg.getResults(100)
@@ -377,7 +384,8 @@ function Electric_Gun()
   if input == nil then return end
 
   local value = input[1]
-
+  
+  gg.setRanges(gg.REGION_ANONYMOUS + gg.REGION_OTHER)
   gg.searchNumber("400;" .. value .. ";40;150::13", gg.TYPE_DWORD)
 
   local r = gg.getResults(100)
