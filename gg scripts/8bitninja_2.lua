@@ -13,6 +13,7 @@ function menu()
   if t == 3 then Score() end
   if t == 4 then Super() end
   if t == 5 then InfoScript() end
+  if t == 6 then os.exit() end
 end
 
 function Coins()
